@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="text-center my-4">Welcome to My Blog!</h1>
+
+    {% if blogs %}
+        {% for blog in blogs %}
+            <div class="mb-4 p-3 bg-light shadow-sm rounded">
+                <h2 class="h4">{{ blog.title }}</h2>
+                <p class="lead">{{ blog.description }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-center">No blogs available at the moment. Please check back later.</p>
+    {% endif %}
+</div>
